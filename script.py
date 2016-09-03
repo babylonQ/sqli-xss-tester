@@ -1,7 +1,7 @@
 import urllib, urllib2, cookielib
 
-username = 'admin'
-password = 'password'
+#username = 'admin'
+#password = 'password'
 
 #read all payload and sort them line by line without \n
 with open("/root/Desktop/sqlipayloads") as f:
@@ -103,13 +103,6 @@ while True:
 	print "Failed attacks: " + str(attackfail)
         print "Successful attacks: " + str(attacksucc)
 #	print "XSS script now needs to run"
-
-
-
-
-#	http://192.168.1.164/vulnerabilities/xss_r/?name=
-
-
   elif selection == '3':
 	break
   else:
