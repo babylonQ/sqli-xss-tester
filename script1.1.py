@@ -26,19 +26,26 @@ def getFlag():
 
 sufix = "&Submit=Submit#"
 flag = 0
-menu = {}
-menu['0']="Set WAF"
-menu['1']="SQLi"
-menu['2']="XSS"
-menu['3']="Exit"
+
+#menu = {}
+#menu['1']="PHPIDSv0.6"
+#menu['2']="MODSecurity"
+#menu['3']="NAXSI"
+
+
+menu2 = {}
+menu2['0']="Set WAF"
+menu2['1']="SQLi"
+menu2['2']="XSS"
+menu2['3']="Exit"
 while True:
-  options=menu.keys()
+  options=menu2.keys()
   options.sort()
 
   getFlag()
 
   for entry in options:
-	print entry, menu[entry]
+	print entry, menu2[entry]
 
   #Menu options
   selection = raw_input("Please select:")
