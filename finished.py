@@ -33,12 +33,12 @@ def getFlag(flag):
 
 flag = 0
 
-def phpids():
+def waf1():
     flag = 0
-    print "PHPIDS"
+    print "WAF 1"
     hacked = ""
     menu2 = {}
-    menu2['0'] = "Set PHPIDSv0.6 WAF"
+    menu2['0'] = "Set WAF 1"
     menu2['1'] = "SQLi"
     menu2['2'] = "XSS"
     menu2['3'] = "Exit"
@@ -119,13 +119,13 @@ def phpids():
         else:
             print ""
 
-def modsec():
+def waf2():
     flag = 0
     hacked = ""
     print "-----------"
-    print "MODSECURITY"
+    print "WAF 2"
     menu2 = {}
-    menu2['0'] = "SecRuleEngine needs to be set ON/DetectionOnly in order to turn on or off WAF. /etc/httpd/conf.d/mod_security.conf"
+    menu2['0'] = "Set WAF 2"
     menu2['1'] = "SQLi"
     menu2['2'] = "XSS"
     menu2['3'] = "Exit"
@@ -222,12 +222,12 @@ def modsec():
         else:
             print ""
 
-def naxsi():
+def waf3():
     flag = 0
     hacked = ""
-    print "NAXSI"
+    print "WAF 3"
     menu2 = {}
-    menu2['0'] = "Change to SecRulesDisabled or SecRulesEnabled in /etc/nginx/naxsi.rules 192.168.1.212"
+    menu2['0'] = "Set WAF 3"
     menu2['1'] = "SQLi"
     menu2['2'] = "XSS"
     menu2['3'] = "Exit"
@@ -333,9 +333,9 @@ def naxsi():
 
 print "Select firewall to attack"
 menu = {}
-menu['1'] = "PHPIDSv0.6"
-menu['2'] = "MODSecurity"
-menu['3'] = "NAXSI"
+menu['1'] = "WAF 1"
+menu['2'] = "WAF 2"
+menu['3'] = "WAF 3"
 
 options = menu.keys()
 options.sort()
@@ -344,11 +344,11 @@ for entry in options:
 
 selection = raw_input("Select:")
 if selection == '1':
-    phpids()
+    waf1()
 elif selection == '2':
-    modsec()
+    waf2()
 elif selection == '3':
-    naxsi()
+    waf3()
 else:
     print "wrong input"
 
